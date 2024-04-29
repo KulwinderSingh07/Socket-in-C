@@ -1,0 +1,42 @@
+socket()
+int sockfd=socket(int domain,int type,int protocol)
+domain-> AF_INET->IPv4
+type-> SOCK_STREAM->TCP
+       SOCK_DGRAM->UDP
+protocol->0 for TCP protocol default
+
+
+bind()->bind assign's the address specified by addr
+when a socket is created with socket function it exists in namespace in address family
+const sockaddr* addr ->specifies the size of the length structure pointed by the addr 
+
+struct sockaddr{
+    sa_family_t sa_family;
+    cahr sa_data[14];
+}
+0-> Succes  function execution
+-1-> Failure
+to avoid compiler warnings
+
+
+listen()->listen for the connection at the socket it marks the socket by sockfd file descipter that will be used for
+int listen(int sockfd,int backlog);
+sockfd->file descripter provided by the socket function that is
+backlog->the no of connections allowed at a time
+
+accept()->retrun a file descipter afterward of when all the new messages to the newsockfd
+accept(sockfd,(struct sockaddr*)&addr,&addrlen);
+
+
+connection() -> 
+connect(int sockfd,const struct sockaddr* addr,socklen_t addrlen);
+
+int write(newsockfd,biffer,buffer_size);
+int read(newsockfd,buffer,buffer_size);
+
+newsockfd,buffer<buffer_size);
+
+
+
+
+addr.socklen_t addrlen kk
