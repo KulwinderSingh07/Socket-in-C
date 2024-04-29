@@ -1,3 +1,8 @@
+/*
+argv[0]-> filename
+argv[1]->server_ipaddress
+argv[2]->portno
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
